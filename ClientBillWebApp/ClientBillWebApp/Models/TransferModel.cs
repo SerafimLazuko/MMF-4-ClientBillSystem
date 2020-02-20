@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace ClientBillWebApp.Models
 {
-    public class PaymentModel
+    public class TransferModel
     {
-        public Guid PaymentId { get; set; }
+        public Guid TransferId { get; set; }
         public Guid DestinationBillId { get; set; }
         public Guid SourceBillId { get; set; }
         public double TransferAmount { get; set; }
