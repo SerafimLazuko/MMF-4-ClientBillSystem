@@ -9,12 +9,11 @@ namespace ClientBillWebApp.Models
     {
         public string Name { get; set; }
 
-        public int ClientId { get; set; }
+        public Guid ClientId { get; set; }
         
-        public ClientModel()
-        {
+        public List<Guid> AssosiatedCards { get; set; } 
 
-        }
+        public List<Guid> AssosiatedBills { get; set; }
 
     }
 }

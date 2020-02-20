@@ -7,9 +7,9 @@ namespace ClientBillWebApp.Models
 {
     public class CreditCardModel
     {
-        public double Balance { get; set; }
         public Guid AssosiatedBillId { get; set; }
         public Guid HolderId { get; set; }
-        public PayHistory PayHistory { get; set; }
+        //public PayHistory PayHistory { get; set; }
+        public bool IsBlocked { get; set; }
     }
 }
