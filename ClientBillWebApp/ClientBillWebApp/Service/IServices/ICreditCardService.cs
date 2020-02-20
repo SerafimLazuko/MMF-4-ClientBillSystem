@@ -14,6 +14,8 @@ namespace ClientBillWebApp.Service.IServices
         bool IsCardActive(Guid creditCardId);
         bool BlockCreditCard(Guid creditCardId);
         bool MakeTransfer(Guid sourceCardId, Guid destinationCardId, double transferAmount);
-        bool MakePayment(Guid sourceCardId, Guid orderId);
+        bool PayOrder(Guid sourceCardId, Guid orderId, double orderCost);
+        bool CancelBill(Guid creditCardId, Guid billId);
+        double PrintBalance(Guid creditCardId);
     }
 }
