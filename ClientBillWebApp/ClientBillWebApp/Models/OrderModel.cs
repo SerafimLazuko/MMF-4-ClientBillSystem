@@ -7,7 +7,7 @@ namespace ClientBillWebApp.Models
 {
     public class OrderModel
     {
-        public Guid OrderId { get; set; }
+        public Guid Id { get; set; }
         public double OrderCost { get; set; }
     }
 }

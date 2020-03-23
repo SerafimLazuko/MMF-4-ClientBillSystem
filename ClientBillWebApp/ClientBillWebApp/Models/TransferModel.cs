@@ -7,7 +7,7 @@ namespace ClientBillWebApp.Models
 {
     public class TransferModel
     {
-        public Guid TransferId { get; set; }
+        public Guid Id { get; set; }
         public Guid DestinationBillId { get; set; }
         public Guid SourceBillId { get; set; }
         public double TransferAmount { get; set; }

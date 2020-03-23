@@ -3,16 +3,25 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using ClientBillWebApp.Models;
+using ClientBillWebApp.Data;
 
 namespace ClientBillWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private ApplicationDbContext db;
+
+        public HomeController(ApplicationDbContext context)
         {
-            return View();
+            db = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await db.Clients.ToListAsync());
         }
 
         public IActionResult About()

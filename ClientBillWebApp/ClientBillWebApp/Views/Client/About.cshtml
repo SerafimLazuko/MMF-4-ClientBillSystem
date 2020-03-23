@@ -1,0 +1,27 @@
+﻿@model ClientBillWebApp.Models.ClientModel
+@{
+    ViewBag.Title = "Client information";
+}
+
+<p>Info about</p>
+<div>
+    <table class="table">
+        <p>Cards:</p>
+        @foreach (var item in Model.AssosiatedCards)
+        {
+            <tr>
+                <dl class="dl-horizontal">
+                    <dt>Id</dt>
+                    <dd>@item.Id</dd>
+
+                    <dt>Is blocked</dt>
+                    <dd>@item.IsBlocked</dd>
+
+                    <dt>Associated bill id</dt>
+                    <dd>@item.AssosiatedBillId</dd>
+                </dl>
+            </tr>
+        }
+    </table>
+</div>
+
